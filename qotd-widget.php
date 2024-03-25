@@ -105,25 +105,28 @@ class QOTD_Widget extends \Elementor\Widget_Base
     //  Renders the output that will be displayed on the page
     protected function render()
     {
-        $current_day = date('N');
-        $quote_index = ($current_day - 1) % count($this->quotes);
-        $quote_text = $this->quotes[$quote_index];
-
-        $settings = $this->get_settings_for_display();
-
+        $current_day = date('N'); // Get the current day (1-7, 1 for Monday, 7 for Sunday)
+        $quote_index = ($current_day - 1) % count($this->quotes); // Calculate the index of the quote based on the current day
+        $quote_text = $this->quotes[$quote_index]; // Get the quote text for the current day
+    
         ?>
         <div class="quote-container">
             <p class="quote" <?php echo $this->get_render_attribute_string('quote_typography'); ?>><?php echo $quote_text; ?></p>
         </div>
         <?php
     }
+    
 
     //  Renders the output that will be displayed on the preview edit page
     protected function content_template()
-    {
+    { 
+        $current_day = date('N'); // Get the current day (1-7, 1 for Monday, 7 for Sunday)
+        $quote_index = ($current_day - 1) % count($this->quotes); // Calculate the index of the quote based on the current day
+        $quote_text = $this->quotes[$quote_index]; // Get the quote text for the current day
+    
         ?>
         <div class="quote-container">
-            <p class="quote" data-setting="quote_text" {{{ settings.quote_typography }}}>{{{ settings.quote_text }}}</p>
+            <p class="quote" <?php echo $this->get_render_attribute_string('quote_typography'); ?>><?php echo $quote_text; ?></p>
         </div>
         <?php
     }
