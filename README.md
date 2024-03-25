@@ -2,7 +2,7 @@
 
 ## Installation
 
-1. **Download**: Download the plugin ZIP file from the [releases page]([link_to_releases](https://github.com/0theoryofsilence0/quote-of-the-day-elementor-widget/releases/tag/v1.0)) or clone the repository.
+1. **Download**: Download the plugin ZIP file from the [releases page](https://github.com/0theoryofsilence0/quote-of-the-day-elementor-widget/releases/tag/v1.0) or clone the repository.
 2. **Upload**: Upload the ZIP file through the WordPress admin interface or extract the plugin folder to the `/wp-content/plugins/` directory.
 3. **Activate**: Activate the plugin through the 'Plugins' menu in WordPress.
 
